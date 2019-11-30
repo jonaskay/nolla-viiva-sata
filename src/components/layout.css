@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Source+Sans+Pro&display=swap');
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -618,5 +620,40 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+body {
+  background: #f7fafc;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Fugaz One', cursive;
+  font-weight: normal;
+}
+p {
+  line-height: 1.5;
+}
+.left {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.right {
+  margin: 0 auto;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .left, .right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .left {
+    padding-right: 2rem;
+    text-align: right;
+    width: 40%;
+  }
+  .right {
+    text-align: left;
+    width: 60%;
   }
 }
