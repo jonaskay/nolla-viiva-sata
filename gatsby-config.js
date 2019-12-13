@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `0-100 (nolla viiva sata)`,
+    title: `0-100 [nolla viiva sata]`,
     description: `Podcast konsulttifirman perustamisesta.`,
     author: `Joonas Kykkänen`,
   },
@@ -24,9 +24,10 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/nollaviivasata-cover.png`, // This path is relative to the root of the site.
+        icon: `src/images/nolla-viiva-sata-cover.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-postcss`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
