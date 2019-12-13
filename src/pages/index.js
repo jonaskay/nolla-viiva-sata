@@ -30,10 +30,13 @@ const IndexPage = () => {
           mitään järkeä?
         </p>
         <p className="my-6">
-          0-100 [nolla viiva sata] kysyy konsulttifirmojen perustajilta mm.
-          ensimmäisistä asiakkaista ja ensimmäisistä työntekijöistä. Joka toinen
-          viikko voit kuunnella uuden tositarinan konsulttifirman
-          perustamisesta.
+          <span className="font-medium">0-100</span> [nolla viiva sata] kysyy
+          konsulttifirmojen perustajilta mm. ensimmäisistä asiakkaista ja
+          ensimmäisistä työntekijöistä. Joka toinen viikko voit kuunnella uuden
+          tositarinan konsulttifirman perustamisesta.
+        </p>
+        <p className="my-8 sm:ml-8 text-xl font-medium">
+          Aloitusjakso tulossa pian!
         </p>
       </div>
     </Layout>
