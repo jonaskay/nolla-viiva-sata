@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `0-100 [nolla viiva sata]`,
+        short_name: `0-100`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#212529`,
+        theme_color: `#212529`,
         display: `minimal-ui`,
         icon: `src/images/nolla-viiva-sata-cover.png`, // This path is relative to the root of the site.
       },
