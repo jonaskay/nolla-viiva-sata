@@ -1,27 +1,40 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Logo from "../components/logo"
+import Player from "../components/player"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query EpisodeQuery {
       site {
         siteMetadata {
           description
         }
       }
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              description
+              file
+            }
+          }
+        }
+      }
     }
   `)
+
+  const episodes = data.allMarkdownRemark.edges.map(({ node }) => node)
 
   return (
     <Layout>
       <SEO title={data.site.siteMetadata.description} />
-      <header className="mb-8 sm:mb-12 sm:ml-8 w-40 sm:w-64">
-        <Logo />
-      </header>
       <div className="text-lg leading-relaxed">
         <p className="my-6">
           Startupin perustaminen ei ole ainoa tapa yrittää digimaailmassa. Voit
@@ -30,15 +43,24 @@ const IndexPage = () => {
           mitään järkeä?
         </p>
         <p className="my-6">
-          <span className="font-medium">0-100</span> [nolla viiva sata] kysyy
-          konsulttifirmojen perustajilta mm. ensimmäisistä asiakkaista ja
-          ensimmäisistä työntekijöistä. Joka toinen viikko voit kuunnella uuden
-          tositarinan konsulttifirman perustamisesta.
-        </p>
-        <p className="my-8 sm:ml-8 text-xl font-medium">
-          Aloitusjakso tulossa pian!
+          0-100 [nolla viiva sata] kysyy konsulttifirmojen perustajilta mm.
+          ensimmäisistä asiakkaista ja ensimmäisistä työntekijöistä. Joka toinen
+          viikko voit kuunnella uuden tositarinan konsulttifirman
+          perustamisesta.
         </p>
       </div>
+      <h2 className="mt-8 text-2xl font-medium">Jaksot</h2>
+      {episodes.map(episode => (
+        <div className="my-4">
+          <h3 className="mb-2 text-xl font-medium">
+            <Link to={episode.fields.slug}>{episode.frontmatter.title}</Link>
+          </h3>
+          <Player
+            body={episode.frontmatter.description}
+            url={episode.frontmatter.file}
+          />
+        </div>
+      ))}
     </Layout>
   )
 }
