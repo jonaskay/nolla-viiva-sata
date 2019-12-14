@@ -91,7 +91,7 @@ module.exports = {
                 { "itunes:explicit": "clean" },
               ],
             }),
-            output: "/rss.xml",
+            output: "/feed.xml",
             title: "0-100 RSS-syöte",
           },
         ],
