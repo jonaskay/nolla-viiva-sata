@@ -58,8 +58,33 @@ module.exports = {
           custom_elements: [
             { "itunes:author": "Joonas Kykkänen" },
             { "itunes:explicit": "clean" },
+            {
+              "itunes:image": {
+                _attr: {
+                  href:
+                    "https://storage.googleapis.com/nolla-viiva-sata-feed/nolla-viiva-sata-cover.png",
+                },
+              },
+            },
+            {
+              "itunes:category": [
+                {
+                  _attr: {
+                    text: "Business",
+                  },
+                },
+                {
+                  "itunes:category": {
+                    _attr: {
+                      text: "Entrepreneurship",
+                    },
+                  },
+                },
+              ],
+            },
           ],
           description: site.siteMetadata.description,
+          language: "fi",
           site_url: site.siteMetadata.siteUrl,
           title: site.siteMetadata.title,
         }),
