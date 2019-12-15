@@ -82,6 +82,12 @@ module.exports = {
                 },
               ],
             },
+            {
+              "itunes:owner": [
+                { "itunes:name": "Joonas Kykkänen" },
+                { "itunes:email": "jonaskay@iki.fi" },
+              ],
+            },
           ],
           description: site.siteMetadata.description,
           language: "fi",
