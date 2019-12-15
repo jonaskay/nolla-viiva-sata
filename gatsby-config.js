@@ -93,6 +93,7 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
+                  custom_elements: [{ "itunes:episodeType": "trailer" }],
                   date: edge.node.frontmatter.date,
                   description: edge.node.frontmatter.description,
                   enclosure: {
