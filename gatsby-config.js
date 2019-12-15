@@ -47,52 +47,62 @@ module.exports = {
                 title
                 description
                 siteUrl
-                site_url: siteUrl
               }
             }
           }
         `,
+        setup: ({ query: { site } }) => ({
+          custom_namespaces: {
+            itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
+          },
+          custom_elements: [
+            { "itunes:author": "Joonas Kykkänen" },
+            { "itunes:explicit": "clean" },
+          ],
+          description: site.siteMetadata.description,
+          site_url: site.siteMetadata.siteUrl,
+          title: site.siteMetadata.title,
+        }),
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.description,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  description: edge.node.frontmatter.description,
+                  enclosure: {
+                    size: edge.node.frontmatter.audioSize,
+                    type: "audio/mp3",
+                    url: edge.node.frontmatter.audioUrl,
+                  },
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 })
               })
             },
             query: `
               {
-                allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
                   edges {
                     node {
                       fields {
                         slug
                       }
                       frontmatter {
-                        date
                         title
                         description
+                        date
+                        audioUrl
+                        audioSize
                       }
                     }
                   }
                 }
               }
             `,
-            setup: () => ({
-              custom_namespaces: {
-                itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
-              },
-              custom_elements: [
-                { "itunes:author": "Joonas Kykkänen" },
-                { "itunes:explicit": "clean" },
-              ],
-            }),
-            output: "/feed.xml",
-            title: "0-100 RSS-syöte",
+            output: "feed.xml",
           },
         ],
       },

@@ -22,7 +22,7 @@ const IndexPage = () => {
             frontmatter {
               title
               description
-              file
+              audioUrl
             }
           }
         }
@@ -57,7 +57,7 @@ const IndexPage = () => {
           </h3>
           <Player
             body={episode.frontmatter.description}
-            url={episode.frontmatter.file}
+            url={episode.frontmatter.audioUrl}
           />
         </div>
       ))}

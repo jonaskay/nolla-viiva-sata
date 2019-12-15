@@ -8,7 +8,7 @@ import Player from "../components/player"
 const Episode = ({ data }) => {
   const {
     markdownRemark: {
-      frontmatter: { title, description, file },
+      frontmatter: { title, description, audioUrl },
     },
   } = data
 
@@ -16,7 +16,7 @@ const Episode = ({ data }) => {
     <Layout>
       <SEO title={title} description={description} />
       <h1 className="my-6 text-3xl font-medium">{title}</h1>
-      <Player body={description} url={file} />
+      <Player body={description} url={audioUrl} />
     </Layout>
   )
 }
@@ -31,7 +31,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-        file
+        audioUrl
       }
     }
   }
