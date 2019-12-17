@@ -101,7 +101,7 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   custom_elements: [
                     { "itunes:duration": edge.node.frontmatter.audioDuration },
-                    { "itunes:episodeType": "trailer" },
+                    { "itunes:episodeType": edge.node.frontmatter.type },
                   ],
                   date: edge.node.frontmatter.date,
                   description: edge.node.frontmatter.description,
@@ -128,6 +128,7 @@ module.exports = {
                       frontmatter {
                         title
                         description
+                        type
                         date
                         audioDuration
                         audioSize
