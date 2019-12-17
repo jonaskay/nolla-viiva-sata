@@ -3,7 +3,7 @@ import applePodcastsBadge from "../images/apple-podcasts-badge.svg"
 
 const Links = () => {
   return (
-    <>
+    <div className="my-8 text-center sm:text-left">
       <a href="https://podcasts.apple.com/fi/podcast/0-100-nolla-viiva-sata/id1491646390">
         <img
           className="inline"
@@ -11,7 +11,9 @@ const Links = () => {
           alt="Apple Podcasts -tunnus"
         />
       </a>
-      <span>&nbsp;&nbsp;&nbsp;tai&nbsp;&nbsp;&nbsp;</span>
+      <div className="mt-3 mb-1 sm:inline sm:m-0">
+        &nbsp;&nbsp;&nbsp;tai&nbsp;&nbsp;&nbsp;
+      </div>
       <a
         className="underline"
         style={{ color: "#a5d8ff" }}
@@ -19,7 +21,7 @@ const Links = () => {
       >
         kuuntele Spotifyssä
       </a>
-    </>
+    </div>
   )
 }
 

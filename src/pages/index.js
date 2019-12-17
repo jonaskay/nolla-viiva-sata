@@ -51,7 +51,7 @@ const IndexPage = () => {
         </p>
         <Links />
       </div>
-      <h2 className="mt-8 text-2xl font-medium">Jaksot</h2>
+      <h2 className="mt-16 text-2xl font-medium">Jaksot</h2>
       {episodes.map(episode => (
         <div className="mt-4 mb-8">
           <h3 className="mb-2 text-xl font-medium">
