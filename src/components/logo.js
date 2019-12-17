@@ -18,7 +18,7 @@ const Logo = () => {
   return (
     <Image
       fluid={data.logoImage.childImageSharp.fluid}
-      alt="0-100 [nolla viiva sata] logo"
+      alt="0-100 [nolla viiva sata] -logo"
     />
   )
 }
