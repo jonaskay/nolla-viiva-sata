@@ -13,7 +13,7 @@ const IndexPage = () => {
           description
         }
       }
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
         edges {
           node {
             fields {
@@ -51,7 +51,7 @@ const IndexPage = () => {
       </div>
       <h2 className="mt-8 text-2xl font-medium">Jaksot</h2>
       {episodes.map(episode => (
-        <div className="my-4">
+        <div className="mt-4 mb-8">
           <h3 className="mb-2 text-xl font-medium">
             <Link to={episode.fields.slug}>{episode.frontmatter.title}</Link>
           </h3>
