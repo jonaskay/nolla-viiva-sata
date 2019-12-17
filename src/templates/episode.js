@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Player from "../components/player"
+import Links from "../components/links"
 
 const Episode = ({ data }) => {
   const {
@@ -17,6 +18,7 @@ const Episode = ({ data }) => {
       <SEO title={title} description={description} />
       <h1 className="my-6 text-3xl font-medium">{title}</h1>
       <Player body={description} url={audioUrl} />
+      <Links />
     </Layout>
   )
 }

@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Links from "../components/links"
 import Player from "../components/player"
 
 const IndexPage = () => {
@@ -48,6 +49,7 @@ const IndexPage = () => {
           viikko voit kuunnella uuden tositarinan konsulttifirman
           perustamisesta.
         </p>
+        <Links />
       </div>
       <h2 className="mt-8 text-2xl font-medium">Jaksot</h2>
       {episodes.map(episode => (
