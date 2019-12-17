@@ -14,7 +14,7 @@ const IndexPage = () => {
           description
         }
       }
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
             fields {
