@@ -1,5 +1,5 @@
 ---
-title: "2: Arto Martonen ja Motley ovat aina myyneet strategiaa"
+title: "2: Motley on aina myynyt strategiaa"
 description: "Miten voit myydä digitaalista strategiaa ravintola Cellan naapurista Suomen suurimmille organisaatioille ilman referenssejä? Entä mitä on luvassa, kun konsulttiyritys laajentaa toimintaansa verkkoliiketoimintaan? 0-100:n vieras Arto Martonen käy läpi Motleyn perustamista, tärkeimpiä oppeja ja yrityksen nykytilannetta."
 type: "full"
 date: 2020-01-02
