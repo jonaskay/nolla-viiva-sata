@@ -45,8 +45,8 @@ const IndexPage = () => {
         </p>
         <p className="my-6">
           0-100 [nolla viiva sata] kysyy konsulttifirmojen perustajilta mm.
-          ensimmäisistä asiakkaista ja ensimmäisistä työntekijöistä. Joka toinen
-          viikko voit kuunnella uuden tositarinan konsulttifirman
+          ensimmäisten asiakkaiden ja ensimmäisten työntekijöiden löytämisestä.
+          Joka toinen viikko voit kuunnella uuden tositarinan konsulttifirman
           perustamisesta.
         </p>
         <Links />
