@@ -36,7 +36,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title={data.site.siteMetadata.description} />
-      <div className="text-lg leading-relaxed">
+      <div className="text-lg sm:text-center leading-relaxed">
         <p className="my-6">
           Startupin perustaminen ei ole ainoa tapa yrittää digimaailmassa. Voit
           valita tuotteiden sijasta palvelut ja konsultoinnin. Mutta miten
@@ -51,7 +51,7 @@ const IndexPage = () => {
         </p>
         <Links />
       </div>
-      <h2 className="mt-16 text-2xl font-medium">Jaksot</h2>
+      <h2 className="mt-16 text-center text-3xl font-medium">Jaksot</h2>
       {episodes.map(episode => (
         <div className="mt-4 mb-8">
           <h3 className="mb-2 text-xl font-medium">
