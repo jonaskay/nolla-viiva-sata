@@ -102,6 +102,7 @@ module.exports = {
                   custom_elements: [
                     { "itunes:duration": edge.node.frontmatter.audioDuration },
                     { "itunes:episodeType": edge.node.frontmatter.type },
+                    { "itunes:summary": edge.node.frontmatter.description },
                   ],
                   date: edge.node.frontmatter.date,
                   description: edge.node.frontmatter.description,
