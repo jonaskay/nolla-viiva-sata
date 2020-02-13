@@ -140,6 +140,7 @@ module.exports = {
                 }
               }
             `,
+            title: "0-100 [nolla viiva sata]",
             output: "feed.xml",
           },
         ],
