@@ -4,6 +4,6 @@ description: "Brändi- ja markkinointitoimisto Unfairin Johanna Raiskio ja Taru 
 type: "full"
 date: 2020-02-27
 audioUrl: https://storage.googleapis.com/nolla-viiva-sata-feed/6-unfair.mp3
-audioSize:
-audioDuration:
+audioSize: 111816171
+audioDuration: 2795
 ---
