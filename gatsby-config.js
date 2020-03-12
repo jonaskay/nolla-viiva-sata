@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `0-100 [nolla viiva sata]`,
     description: `Podcast konsulttifirman perustamisesta.`,
-    author: `Joonas Kykkänen`,
+    author: `@joonaskykkanen`,
     siteUrl: `https://www.nollaviivasata.fi`,
   },
   plugins: [
