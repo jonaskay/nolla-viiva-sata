@@ -25,18 +25,6 @@ const Links = () => {
           name="Pocket Casts -tunnus"
         />
       </div>
-      <div className="text-center">
-        <div className="mt-3 mb-1 sm:inline sm:m-0">
-          &nbsp;&nbsp;&nbsp;tai&nbsp;&nbsp;&nbsp;
-        </div>
-        <a
-          className="underline"
-          style={{ color: "#a5d8ff" }}
-          href="https://open.spotify.com/show/7pSZ7rw3I00kcKSfOx1J21?si=byPr_wwZRDKlvNUuCNmqBA"
-        >
-          kuuntele Spotifyssä
-        </a>
-      </div>
     </div>
   )
 }
