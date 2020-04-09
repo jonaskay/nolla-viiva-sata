@@ -103,6 +103,7 @@ module.exports = {
                     { "itunes:duration": edge.node.frontmatter.audioDuration },
                     { "itunes:episodeType": edge.node.frontmatter.type },
                     { "itunes:summary": edge.node.frontmatter.description },
+                    { "itunes:explicit": edge.node.frontmatter.explicit },
                   ],
                   date: edge.node.frontmatter.date,
                   description: edge.node.frontmatter.description,
@@ -130,6 +131,7 @@ module.exports = {
                         title
                         description
                         type
+                        explicit
                         date
                         audioDuration
                         audioSize
