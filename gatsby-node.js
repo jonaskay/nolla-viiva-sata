@@ -14,9 +14,6 @@ exports.createPages = async ({ graphql, actions }) => {
               fields {
                 slug
               }
-              frontmatter {
-                title
-              }
             }
           }
         }
@@ -30,7 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const episodes = result.data.allMarkdownRemark.edges
 
-  episodes.forEach(episode => {
+  episodes.forEach((episode) => {
     createPage({
       path: episode.node.fields.slug,
       component: template,
